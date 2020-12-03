@@ -9,7 +9,7 @@ Languages: Javascript, Go, Clojure
 To run:
 
 ``` sh
-$ cd day1
+$ cd "day1 - Report Repair"
 $ deno run --allow-read day1.js
 ```
 
@@ -18,6 +18,6 @@ $ deno run --allow-read day1.js
 To run:
 
 ``` sh
-$ cd day1
+$ cd "day1 - Report Repair"
 $ go run ./day1/day1.go
 ```
