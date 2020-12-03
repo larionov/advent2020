@@ -1,5 +1,5 @@
-//const input = (await Deno.readTextFile("./day2_light.txt")).split("\n");
-const input = (await Deno.readTextFile("./day2.txt")).split("\n");
+//const input = (await Deno.readTextFile("./input_light.txt")).split("\n");
+const input = (await Deno.readTextFile("./input.txt")).split("\n");
 
 function isValidPassword(line) {
     if (!line) return false;

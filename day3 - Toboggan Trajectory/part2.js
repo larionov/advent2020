@@ -1,5 +1,5 @@
-//const input = (await Deno.readTextFile("./day3_light.txt")).split("\n");
-const input = (await Deno.readTextFile("./day3.txt")).split("\n");
+//const input = (await Deno.readTextFile("./input_light.txt")).split("\n");
+const input = (await Deno.readTextFile("./input.txt")).split("\n");
 
 function isTree(index, line) {
     return line.split('')[index % line.length] === '#';
