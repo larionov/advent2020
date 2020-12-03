@@ -1,11 +1,10 @@
 package main
 
 import (
-	// "bufio"
 	"fmt"
-	// "io"
 	"io/ioutil"
-	// "os"
+	"strconv"
+	"strings"
 )
 
 func check(e error) {
@@ -15,7 +14,25 @@ func check(e error) {
 }
 
 func main() {
-	dat, err := ioutil.ReadFile("./input.txt")
+	data, err := ioutil.ReadFile("./input.txt")
 	check(err)
-	fmt.Print(string(dat))
+
+	lines := strings.Split(strings.TrimSpace(string(data)), "\n")
+
+	for i := 0; i < len(lines); i++ {
+		for j := i; j < len(lines); j++ {
+			for k := j; k < len(lines); k++ {
+
+				iv, err := strconv.Atoi(lines[i])
+				jv, err := strconv.Atoi(lines[j])
+				kv, err := strconv.Atoi(lines[k])
+				check(err)
+
+				if iv+jv+kv == 2020 {
+					fmt.Print(iv*jv*kv, "\n")
+
+				}
+			}
+		}
+	}
 }
