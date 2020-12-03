@@ -2,7 +2,7 @@
 
 Working on tasks from https://adventofcode.com/2020
 
-Languages: Javascript, Go, Clojure
+Languages: Javascript, Go, [Clojure]
 
 ## Javascript
 
