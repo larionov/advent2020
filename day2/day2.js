@@ -1,9 +1,4 @@
-// const input = [
-//     '1-3 a: abcde',
-//     '1-3 b: cdefg',
-//     '2-9 c: ccccccccc',
-// ];
-
+//const input = (await Deno.readTextFile("./day2_light.txt")).split("\n");
 const input = (await Deno.readTextFile("./day2.txt")).split("\n");
 
 function isValidPassword(line) {

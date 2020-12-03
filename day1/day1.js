@@ -1,7 +1,6 @@
-//const input = [1721, 979, 366, 299, 675, 1456];
+const input = (await Deno.readTextFile("./day1_light.txt")).split("\n").map(v => parseInt(v, 10));
+// const input = (await Deno.readTextFile("./day1.txt")).split("\n").map(v => parseInt(v, 10));
 
-const input = (await Deno.readTextFile("./day1.txt")).split("\n").map(v => parseInt(v, 10));
-console.log(input);
 function findSumTo2020(arr) {
     const filtered = arr.filter(v => v <= 2020);
     for (let i = 0; i < filtered.length; i++) {
@@ -13,9 +12,7 @@ function findSumTo2020(arr) {
             }
         }
     }
-
     return 0;
-
 }
 
 console.log(findSumTo2020(input));

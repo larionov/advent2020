@@ -1,20 +1,4 @@
-//     '1-3 a: abcde',
-//     '1-3 b: cdefg',
-//     '2-9 c: ccccccccc',
-// ];
-// const input = [
-//     '..##.......',
-//     '#...#...#..',
-//     '.#....#..#.',
-//     '..#.#...#.#',
-//     '.#...##..#.',
-//     '..#.##.....',
-//     '.#.#.#....#',
-//     '.#........#',
-//     '#.##...#...',
-//     '#...##....#',
-//     '.#..#...#.#'
-// ];
+//const input = (await Deno.readTextFile("./day3_light.txt")).split("\n");
 const input = (await Deno.readTextFile("./day3.txt")).split("\n");
 
 function isTree(index, line) {
@@ -22,7 +6,6 @@ function isTree(index, line) {
 }
 
 function getSlope([right, down], data) {
-//    console.log(data);
     let count = 0;
     for (let d = 0, i = 0; d < data.length; d += down, i += right) {
         if(isTree(i, data[d])) {
