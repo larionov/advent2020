@@ -8,8 +8,8 @@ Languages: Javascript, Go, [Clojure]
 
 To run:
 
-``` sh
-$ cd "day1 - Report Repair"
+```sh
+$ cd "src/advent2020/day1"
 $ deno run --allow-read part2.js
 ```
 
@@ -17,7 +17,7 @@ $ deno run --allow-read part2.js
 
 To run:
 
-``` sh
-$ cd "day1 - Report Repair"
+```sh
+$ cd "src/advent2020/day1"
 $ go run ./day1/part2.go
 ```

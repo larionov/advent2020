@@ -1,4 +1,4 @@
-(ns advent2020.day1.part1
+(ns advent2020.day1.part2
   (:require [clojure.java.io :as io]
             [clojure.string :as str]))
 
@@ -7,11 +7,9 @@
                str/split-lines
                (map #(Integer/parseInt %))))
 
-data
-
 (set (for [x data
            y data
-           :when (= 2020 (+ x y))]
-       (* x y)))
-
-;; => #{805731}
+           z data
+           :when (= 2020 (+ x y z))]
+       (* x y z)))
+;; => #{192684960}
