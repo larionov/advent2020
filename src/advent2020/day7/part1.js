@@ -3,7 +3,6 @@ const input = (await Deno.readTextFile('./input.txt')).trim().split('\n');
 
 function parseRule(line) {
   const m = line.match(/^(.+) bags contain (.+).$/);
-  //  console.log(m);
   const name = m[1].trim();
   const contains = m[2]
     .split(',')
@@ -49,8 +48,7 @@ function bfs(index, nodeStart, nodeEnd, result) {
 const rules = input.map(parseRule);
 const index = buildGraphIndex(rules);
 
-const b = bfs(index, 'light red', 'shiny gold');
-console.log({ rules, index, b });
+//const b = bfs(index, 'light red', 'shiny gold');
 
 console.log(
   Object.keys(index)

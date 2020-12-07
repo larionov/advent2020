@@ -25,14 +25,14 @@ function buildGraphIndex(rules) {
   }, {});
 }
 
-function findChildGraph(index, nodeStart) {
+function findChildGraphWeight(index, nodeStart) {
   let q = [];
   let result = 0;
 
   q.push([nodeStart, 1]);
   while (q.length) {
     const [v, parentWeight] = q.pop();
-    console.log({ v, parentWeight, result });
+
     result += parentWeight;
     const edges = Object.keys(index[v].contains);
     edges.forEach((w) => {
@@ -44,5 +44,4 @@ function findChildGraph(index, nodeStart) {
 const rules = input.map(parseRule);
 const index = buildGraphIndex(rules);
 
-const b = findChildGraph(index, 'shiny gold');
-console.log(b);
+console.log(findChildGraphWeight(index, 'shiny gold'));
