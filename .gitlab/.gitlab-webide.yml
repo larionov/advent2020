@@ -1,0 +1,9 @@
+terminal:
+  # This can be any image that has the necessary runtime environment for your project.
+  image: hayd/deno:1.5.2 
+  before_script:
+    - apt-get update
+  script: cd src/advent2020/day8/ && deno run --allow-read  ./part2.js
+  variables:
+    RAILS_ENV: "test"
+    NODE_ENV: "test"
