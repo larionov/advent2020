@@ -1,9 +1,13 @@
 terminal:
   # This can be any image that has the necessary runtime environment for your project.
-  image: hayd/deno:1.5.2 
-  before_script:
-    - apt-get update
-  script: cd src/advent2020/day8/ && deno run --allow-read  ./part2.js
-  variables:
-    RAILS_ENV: "test"
-    NODE_ENV: "test"
+  # cd src/advent2020/day8/ && deno run --allow-read  ./part2.js
+  image:
+    name: node:10-alpine
+  services:
+    - name: registry.gitlab.com/gitlab-org/webide-file-sync:latest
+      alias: webide-file-sync
+      entrypoint: ["/bin/sh"]
+      command: ["-c", "sleep 5 && ./webide-file-sync -project-dir $CI_PROJECT_DIR"]
+      ports:
+        # The `webide-file-sync` executable defaults to port 3000.
+        - number: 3000
