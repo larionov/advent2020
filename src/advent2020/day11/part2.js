@@ -18,7 +18,6 @@ function get(x, y, seats) {
   if (x < 0 || y < 0) res = '.';
   else if (x >= seats[0].length || y >= seats.length) res = '.';
   else res = seats[y][x];
-  //  console.log({ x, y, res });
   return res;
 }
 
@@ -113,13 +112,9 @@ function clone(seats) {
 
 function iterate(seats) {
   const newSeats = clone(seats);
-  console.log('it');
-  //print(seats);
   for (let y = 0; y < seats.length; y++) {
     for (let x = 0; x < seats[0].length; x++) {
       const n = countNeighbors(x, y, seats);
-      //      console.log(n, get(x, y, seats));
-      //console.log(n);
 
       if (get(x, y, seats) === 'L' && n === 0) {
         put(x, y, '#', newSeats);
@@ -131,13 +126,6 @@ function iterate(seats) {
   return newSeats;
 }
 
-// print(input);
-// let it1 = iterate(input);
-// let it2 = iterate(it1);
-// let it3 = iterate(it2);
-// //let it4 = iterate(it3);
-
-// print(it3);
 let seats = clone(input);
 for (;;) {
   let newSeats = iterate(seats);
